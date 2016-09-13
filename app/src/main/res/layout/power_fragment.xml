@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txtComutareSenzori"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:background="@color/bgSenzoriGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="COMUTARE SENZORI"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/first_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"
+            android:layout_below="@+id/txtComutareSenzori"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTemperatura"
+            android:layout_below="@id/first_line"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/icon_temp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/temperature_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temperatura"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/clock_icon"
+                            />
+                        <TextView
+                            android:id="@+id/temp_hour"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Off"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkGray"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/switch_temp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/power_button_gray"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutUmiditate"
+            android:layout_below="@id/layoutTemperatura"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/icon_humid"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/humidity_blue"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/humid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Umiditate"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/clock_icon"
+                            />
+                        <TextView
+                            android:id="@+id/humid_hour"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="11:30"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkGray"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/switch_humid"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/power_button_green"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLumina"
+            android:layout_below="@id/layoutUmiditate"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/icon_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/light_blue"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lumina"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/clock_icon"
+                            />
+                        <TextView
+                            android:id="@+id/light_hour"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="21:19"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkGray"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/switch_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/power_button_green"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPresiune"
+            android:layout_below="@id/layoutLumina"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/icon_press"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/pressure_blue"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/press"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Presiune"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/clock_icon"
+                            />
+                        <TextView
+                            android:id="@+id/press_hour"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:40"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkGray"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/switch_press"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/power_button_green"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMainSwitch"
+            android:layout_below="@id/layoutPresiune"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:background="@color/bgSenzoriGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="TOTI SENZORII"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/second_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"
+            android:layout_below="@+id/txtMainSwitch"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTotiSenzorii"
+            android:layout_below="@id/second_line"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/real_sensors_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start/Stop Senzori"
+                    android:textSize="18sp"
+                    android:textColor="@color/darkGray"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/switch_all"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/power_button_gray"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGray"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtUrgenta"
+            android:layout_below="@id/layoutTotiSenzorii"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:background="@color/bgSenzoriGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGray"
+            android:text="OPRIRE URGENTA"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/third_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"
+            android:layout_below="@+id/txtUrgenta"/>
+
+        <LinearLayout
+            android:layout_below="@id/third_line"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/warning_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Atentie! Doar cazuri urgenta"
+                    android:textSize="18sp"
+                    android:textColor="@color/darkGray"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/switch_emergency"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/power_button_red"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

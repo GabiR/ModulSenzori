@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_weight="0.99"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_weight="0.01"
+        android:id="@+id/menu"
+        android:background="@color/bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkGray"/>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/readingsBtn"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/read_icon_blue"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:text="Citiri"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/graphsBtn"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/graph_icon_gray"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:textColor="@color/darkGray"
+                    android:text="Grafice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/historyBtn"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/history_icon_gray"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:textColor="@color/darkGray"
+                    android:text="Istoric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ordersBtn"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/power_icon_gray"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:textColor="@color/darkGray"
+                    android:text="Comenzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

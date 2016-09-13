@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:id="@+id/relativeLayout"
+    android:background="@drawable/splash_screen_bg"
+    android:layout_height="match_parent">
+
+    <com.eftimoff.androipathview.PathView
+        android:id="@+id/pathView"
+        android:layout_width="800dp"
+        android:layout_height="350dp"
+        app:svg="@raw/splash_icon"
+        app:pathColor="@android:color/white"
+        app:pathWidth="2dp"/>
+
+</RelativeLayout>
